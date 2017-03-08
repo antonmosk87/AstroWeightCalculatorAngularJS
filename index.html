@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+
+<head>
+</head>
+
+<body>
+    <h1>AstroWeight Calculator</h1>
+    <div ng-app="app">
+        <div ng-controller="HomeController as homeCtrl">
+            <input type="number" ng-model="homeCtrl.userWeight" placeholder="Enter your weight" />
+
+            <select ng-model='homeCtrl.planet' ng-options='planets[0] for planets in homeCtrl.planets'></select>
+            <button ng-click="homeCtrl.calculateWeight()">Calculate</button>
+            <p>{{homeCtrl.output}}</p>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="angular.js"></script>
+</body>
+
+</html>
